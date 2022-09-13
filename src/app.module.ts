@@ -11,9 +11,6 @@ import { UsersModule } from './users/users.module';
 @Module({
     imports: [
         ConfigModule.forRoot({ isGlobal: true }),
-        // GraphQLModule.forRoot({
-        //     autoSchemaFile: 'schema.gql',
-        // }),
         GraphQLModule.forRoot<ApolloDriverConfig>({
             driver: ApolloDriver,
             autoSchemaFile: true,
